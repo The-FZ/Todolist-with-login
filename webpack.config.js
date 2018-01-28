@@ -23,6 +23,7 @@ module.exports = {
     alias:{
       TodoApp:path.resolve(__dirname,'./app/components/TodoApp.js'),
       TodoList:path.resolve(__dirname,'./app/components/TodoList.js'),
+      AddTodo:path.resolve(__dirname,'./app/components/AddTodo.js'),
       Todo:path.resolve(__dirname,'./app/components/Todo.js'),
       applicationStyles:path.resolve(__dirname,'./app/styles/app.scss')
     },
