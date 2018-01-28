@@ -21,7 +21,7 @@ module.exports = {
   },
   resolve:{
     alias:{
-      Main:path.resolve(__dirname,'./app/components/Main.js'),
+      TodoApp:path.resolve(__dirname,'./app/components/TodoApp.js'),
       applicationStyles:path.resolve(__dirname,'./app/styles/app.scss')
     },
     extensions:[' ', '.js', '.jsx', '.css', '.scss']
