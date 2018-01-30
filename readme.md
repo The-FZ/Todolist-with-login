@@ -1,1 +1,1 @@
-React Timer application.
+React todolist application.
