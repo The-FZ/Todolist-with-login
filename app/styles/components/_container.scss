@@ -1,0 +1,34 @@
+.container{
+  background-color:$light-grey;
+  border: 1px solid #eee;
+  border-radius: 5px;
+  padding: 0;
+  margin-bottom: 2rem;
+}
+
+.container__header{
+  border-bottom: 1px solid #eee;
+  padding: 1rem;
+
+    label{
+      cursor: pointer;
+      font-size: 1rem;
+    }
+
+    >:last-child{
+      align-items: center;
+      display: flex;
+    }
+
+}
+
+.container__footer{
+  padding: 1rem 1rem 0 1rem;
+  border-top: 1px solid #eee;
+}
+
+.container__message{
+  color:#aaa;
+  margin:2rem auto;
+  text-align: center;
+}

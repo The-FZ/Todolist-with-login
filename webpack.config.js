@@ -26,6 +26,7 @@ module.exports = {
       TodoSearch:path.resolve(__dirname,'./app/components/TodoSearch.js'),
       AddTodo:path.resolve(__dirname,'./app/components/AddTodo.js'),
       Todo:path.resolve(__dirname,'./app/components/Todo.js'),
+      TodoAPI:path.resolve(__dirname,'./app/api/TodoAPI.js'),
       applicationStyles:path.resolve(__dirname,'./app/styles/app.scss')
     },
     extensions:[' ', '.js', '.jsx', '.css', '.scss']
