@@ -1,7 +1,9 @@
 var React = require('react');
-var Todo = require('Todo');
+import Todo from 'Todo';
+var {connect} = require('react-redux')
 
-var TodoList =({todos,onToggle})=>{
+
+export var TodoList =({todos,onToggle})=>{
 
   var renderTodos = ()=>{
     if(todos.length===0){
@@ -12,7 +14,7 @@ var TodoList =({todos,onToggle})=>{
       )
     }
     return todos.map(todo=>{
-      return <Todo key={todo.id} todo={todo} onToggle={onToggle}/>
+      return <Todo key={todo.id} todo={todo}/>
     });
   }
   return (
@@ -22,4 +24,10 @@ var TodoList =({todos,onToggle})=>{
   )
 };
 
-module.exports = TodoList;
+export default connect(
+  (state)=>{
+    return {
+      todos:state.todos
+    }
+  }
+)(TodoList);
