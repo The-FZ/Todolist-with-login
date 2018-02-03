@@ -27,7 +27,10 @@ module.exports = {
       AddTodo:path.resolve(__dirname,'./app/components/AddTodo.js'),
       Todo:path.resolve(__dirname,'./app/components/Todo.js'),
       TodoAPI:path.resolve(__dirname,'./app/api/TodoAPI.js'),
-      applicationStyles:path.resolve(__dirname,'./app/styles/app.scss')
+      applicationStyles:path.resolve(__dirname,'./app/styles/app.scss'),
+      actions:path.resolve(__dirname,'./app/actions/actions.js'),
+      reducers:path.resolve(__dirname,'./app/reducers/reducers.js'),
+      configureStore:path.resolve(__dirname,'./app/store/configureStore.js')
     },
     extensions:[' ', '.js', '.jsx', '.css', '.scss']
   },
