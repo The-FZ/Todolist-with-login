@@ -1,9 +1,9 @@
 var React = require('react');
 import Todo from 'Todo';
 var {connect} = require('react-redux')
+var TodoAPI = require('TodoAPI');
 
-
-export var TodoList =({todos,onToggle})=>{
+export var TodoList =({todos,onToggle,showCompleted,searchText})=>{
 
   var renderTodos = ()=>{
     if(todos.length===0){
@@ -13,7 +13,7 @@ export var TodoList =({todos,onToggle})=>{
         </p>
       )
     }
-    return todos.map(todo=>{
+    return TodoAPI.filterTodos(todos,showCompleted,searchText).map(todo=>{
       return <Todo key={todo.id} todo={todo}/>
     });
   }
@@ -26,8 +26,6 @@ export var TodoList =({todos,onToggle})=>{
 
 export default connect(
   (state)=>{
-    return {
-      todos:state.todos
-    }
+    return state;
   }
 )(TodoList);
