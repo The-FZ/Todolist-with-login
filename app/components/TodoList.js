@@ -6,14 +6,15 @@ var TodoAPI = require('TodoAPI');
 export var TodoList =({todos,onToggle,showCompleted,searchText})=>{
 
   var renderTodos = ()=>{
-    if(todos.length===0){
+    var filterTodos = TodoAPI.filterTodos(todos,showCompleted,searchText);
+    if(filterTodos.length===0){
       return (
         <p className='container__message'>
           Nothing to do.
         </p>
       )
     }
-    return TodoAPI.filterTodos(todos,showCompleted,searchText).map(todo=>{
+    return filterTodos.map(todo=>{
       return <Todo key={todo.id} todo={todo}/>
     });
   }

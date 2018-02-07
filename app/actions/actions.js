@@ -22,6 +22,26 @@ export var addTodos=(todos)=>{
   };
 };
 
+export var startAddTodos=()=>{
+  return (dispatch, getState)=>{
+    var todosRef = firebaseRef.child('todos');
+      return todosRef.once('value').then((snapshot)=>{
+      var todos = snapshot.val() || {};
+      var parsedTodos = [];
+
+      Object.keys(todos).forEach((todoId)=>{
+        parsedTodos.push({
+          id:todoId,
+          ...todos[todoId]
+        });
+      });
+
+      dispatch(addTodos(parsedTodos));
+
+    });
+  };
+};
+
 
 export var startAddTodo=(text)=>{
   return (dispatch,getState)=>{

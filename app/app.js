@@ -7,14 +7,7 @@ var actions = require('actions');
 var store = require('configureStore').configure();
 var TodoAPI = require('TodoAPI');
 
-store.subscribe(()=>{
-  var state = store.getState();
-  console.log('New State', state);
-  TodoAPI.setTodos(state.todos);
-});
-
-var initialTodos = TodoAPI.getTodos();
-store.dispatch(actions.addTodos(initialTodos));
+store.dispatch(actions.startAddTodos());
 
 //custom scss
 require('style-loader!css-loader!sass-loader!applicationStyles');
