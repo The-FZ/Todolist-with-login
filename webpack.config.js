@@ -30,7 +30,8 @@ module.exports = {
       applicationStyles:path.resolve(__dirname,'./app/styles/app.scss'),
       actions:path.resolve(__dirname,'./app/actions/actions.js'),
       reducers:path.resolve(__dirname,'./app/reducers/reducers.js'),
-      configureStore:path.resolve(__dirname,'./app/store/configureStore.js')
+      configureStore:path.resolve(__dirname,'./app/store/configureStore.js'),
+      index:path.resolve(__dirname,'./app/firebase/index.js')
     },
     extensions:[' ', '.js', '.jsx', '.css', '.scss']
   },
