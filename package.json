@@ -1,11 +1,11 @@
 {
-  "name": "reactnewweatherapp",
+  "name": "reacttodolistapp",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "start": "npm run build && node server.js",
-    "build": "webpack",
+    "build": "webpack"
   },
   "author": "",
   "license": "ISC",
@@ -17,7 +17,9 @@
     "prop-types": "^15.6.0",
     "react": "^16.1.1",
     "react-dom": "^16.1.1",
-    "react-router-dom": "^4.2.2",
+    "react-router-dom": "^4.2.2"
+  },
+  "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
     "babel-preset-es2015": "^6.24.1",
@@ -37,8 +39,5 @@
     "style-loader": "^0.19.0",
     "uuid": "^3.2.1",
     "webpack": "^3.8.1"
-  },
-  "devDependencies": {
-
   }
 }
