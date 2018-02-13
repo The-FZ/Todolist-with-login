@@ -37,3 +37,7 @@ var newTodosRef = todosRef.push({
 var newTodosRef = todosRef.push({
   text:'Todo 2'
 });
+
+var newTodosRef = todosRef.push({
+  text: 'Todo 3'
+});
